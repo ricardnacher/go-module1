@@ -21,7 +21,7 @@ sonarqube {
         property 'sonar.organization', 'midokura'
         property 'sonar.projectKey', 'go-module1'
         property 'sonar.projectName', 'go-module1'    
-        property 'sonar.source', '.'
+        property 'sonar.sources', '.'
     }
 }
 
