@@ -1,6 +1,6 @@
 Initialized native services in: /home/rnacher/.gradle/native
-The client will now receive all logging from the daemon (pid: 271141). The daemon log file: /home/rnacher/.gradle/daemon/6.8.1/daemon-271141.out.log
-Starting 11th build in daemon [uptime: 20 mins 0.04 secs, performance: 100%, non-heap usage: 50% of 256 MiB]
+The client will now receive all logging from the daemon (pid: 276193). The daemon log file: /home/rnacher/.gradle/daemon/6.8.1/daemon-276193.out.log
+Starting 14th build in daemon [uptime: 5 mins 10.643 secs, performance: 100%, non-heap usage: 29% of 256 MiB]
 Using 8 worker leases.
 Watching the file system is disabled
 Starting Build
@@ -10,6 +10,14 @@ Included projects: [root project 'gopoc']
 
 > Configure project :
 Evaluating root project 'gopoc' using build file '/home/rnacher/src/go/goandgradle/build.gradle'.
+isCleanTag -> false
+branchName -> test3
+class -> class com.sun.proxy.$Proxy100
+gitHash -> e76040cf23
+version -> v1-1-ge76040c.dirty
+gitHashFull -> e76040cf2388081b046ffec535343e71cbd73771
+commitDistance -> 1
+lastTag -> v1
 Found go 1.16.6 in /usr/share/go/bin/go, use it.
 Ignore packages globally: appengine,a,gen,shared,common,thrifttest,appengine_internal,thrift,tutorial
 All projects evaluated.
@@ -26,16 +34,16 @@ Task ':sonarqube' is not up-to-date because:
 User cache: /home/rnacher/.sonar/cache
 Default locale: "en_US", source code encoding: "UTF-8"
 Load global settings
-Load global settings (done) | time=330ms
+Load global settings (done) | time=374ms
 Server id: 1BD809FA-AWHW8ct9-T_TB3XqouNu
 User cache: /home/rnacher/.sonar/cache
 Load/download plugins
 Load plugins index
-Load plugins index (done) | time=93ms
-Load/download plugins (done) | time=169ms
+Load plugins index (done) | time=71ms
+Load/download plugins (done) | time=145ms
 Loaded core extensions: developer-scanner
 Load project settings for component key: 'go-module1'
-Load project settings for component key: 'go-module1' (done) | time=59ms
+Load project settings for component key: 'go-module1' (done) | time=80ms
 Process project properties
 Execute project builders
 Execute project builders (done) | time=1ms
@@ -43,18 +51,18 @@ Project key: go-module1
 Base dir: /home/rnacher/src/go/goandgradle
 Working dir: /home/rnacher/src/go/goandgradle/build/sonar
 Load project branches
-Load project branches (done) | time=59ms
+Load project branches (done) | time=54ms
 Check ALM binding of project 'go-module1'
 Detected project binding: NOT_BOUND
-Check ALM binding of project 'go-module1' (done) | time=50ms
+Check ALM binding of project 'go-module1' (done) | time=49ms
 Load project pull requests
-Load project pull requests (done) | time=50ms
+Load project pull requests (done) | time=55ms
 Load branch configuration
-Load branch configuration (done) | time=1ms
+Load branch configuration (done) | time=3ms
 Load quality profiles
-Load quality profiles (done) | time=99ms
+Load quality profiles (done) | time=107ms
 Load active rules
-Load active rules (done) | time=2370ms
+Load active rules (done) | time=2440ms
 Organization key: midokura
 Branch name: test3, type: short-lived
 Indexing files...
@@ -68,40 +76,40 @@ Project configuration:
 Quality profile for go: Sonar way
 ------------- Run sensors on module go-module1
 Load metrics repository
-Load metrics repository (done) | time=69ms
+Load metrics repository (done) | time=53ms
 Sensor CSS Rules [cssfamily]
 No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
-Sensor CSS Rules [cssfamily] (done) | time=0ms
+Sensor CSS Rules [cssfamily] (done) | time=1ms
 Sensor C# Project Type Information [csharp]
-Sensor C# Project Type Information [csharp] (done) | time=0ms
+Sensor C# Project Type Information [csharp] (done) | time=1ms
 Sensor C# Analysis Log [csharp]
-Sensor C# Analysis Log [csharp] (done) | time=10ms
+Sensor C# Analysis Log [csharp] (done) | time=12ms
 Sensor C# Properties [csharp]
-Sensor C# Properties [csharp] (done) | time=1ms
+Sensor C# Properties [csharp] (done) | time=0ms
 Sensor JavaXmlSensor [java]
-Sensor JavaXmlSensor [java] (done) | time=0ms
+Sensor JavaXmlSensor [java] (done) | time=1ms
 Sensor HTML [web]
-Sensor HTML [web] (done) | time=3ms
+Sensor HTML [web] (done) | time=2ms
 Sensor VB.NET Project Type Information [vbnet]
 Sensor VB.NET Project Type Information [vbnet] (done) | time=0ms
 Sensor VB.NET Analysis Log [vbnet]
-Sensor VB.NET Analysis Log [vbnet] (done) | time=11ms
+Sensor VB.NET Analysis Log [vbnet] (done) | time=14ms
 Sensor VB.NET Properties [vbnet]
 Sensor VB.NET Properties [vbnet] (done) | time=0ms
 Sensor Code Quality and Security for Go [go]
 Load project repositories
-Load project repositories (done) | time=59ms
-Sensor Code Quality and Security for Go [go] (done) | time=179ms
+Load project repositories (done) | time=56ms
+Sensor Code Quality and Security for Go [go] (done) | time=194ms
 Sensor JaCoCo XML Report Importer [jacoco]
 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
 No report imported, no coverage information will be imported by JaCoCo XML Report Importer
-Sensor JaCoCo XML Report Importer [jacoco] (done) | time=2ms
+Sensor JaCoCo XML Report Importer [jacoco] (done) | time=3ms
 Sensor ThymeLeaf template sensor [securityjavafrontend]
 Sensor ThymeLeaf template sensor [securityjavafrontend] (done) | time=0ms
 Sensor Serverless configuration file sensor [securityjsfrontend]
 0 Serverless function entries were found in the project
 0 Serverless function handlers were kept as entrypoints
-Sensor Serverless configuration file sensor [securityjsfrontend] (done) | time=52ms
+Sensor Serverless configuration file sensor [securityjsfrontend] (done) | time=65ms
 Sensor AWS SAM template file sensor [securityjsfrontend]
 Sensor AWS SAM template file sensor [securityjsfrontend] (done) | time=1ms
 Sensor JavaSecuritySensor [security]
@@ -115,7 +123,7 @@ Reading type hierarchy from: /home/rnacher/src/go/goandgradle/build/ucfg_cs2
 Read 0 type definitions
 Reading UCFGs from: /home/rnacher/src/go/goandgradle/build/ucfg_cs2
 No UCFGs have been included for analysis.
-Sensor CSharpSecuritySensor [security] (done) | time=0ms
+Sensor CSharpSecuritySensor [security] (done) | time=1ms
 Sensor PhpSecuritySensor [security]
 Reading type hierarchy from: /home/rnacher/src/go/goandgradle/build/sonar/ucfg2/php
 Read 0 type definitions
@@ -132,72 +140,72 @@ Sensor JsSecuritySensor [security]
 Reading type hierarchy from: /home/rnacher/src/go/goandgradle/build/sonar/ucfg2/js
 Read 0 type definitions
 Reading UCFGs from: /home/rnacher/src/go/goandgradle/build/sonar/ucfg2/js
-17:42:18.001224 Building Runtime Type propagation graph
-17:42:18.002988 Running Tarjan on 0 nodes
-17:42:18.003378 Tarjan found 0 components
-17:42:18.00344 Variable type analysis: done
-17:42:18.003678 Building Runtime Type propagation graph
-17:42:18.003743 Running Tarjan on 0 nodes
-17:42:18.003782 Tarjan found 0 components
-17:42:18.003814 Variable type analysis: done
+17:57:37.428003 Building Runtime Type propagation graph
+17:57:37.432281 Running Tarjan on 0 nodes
+17:57:37.432954 Tarjan found 0 components
+17:57:37.433075 Variable type analysis: done
+17:57:37.433463 Building Runtime Type propagation graph
+17:57:37.433597 Running Tarjan on 0 nodes
+17:57:37.433672 Tarjan found 0 components
+17:57:37.433746 Variable type analysis: done
 Analyzing 2 ucfgs to detect vulnerabilities.
-rule: S5144, entrypoints: 3
-Running symbolic analysis
-rule: S5144 done
-rule: S2083, entrypoints: 3
-Running symbolic analysis
-rule: S2083 done
-rule: S2076, entrypoints: 3
-Running symbolic analysis
-rule: S2076 done
-rule: S5883, entrypoints: 3
-Running symbolic analysis
-rule: S5883 done
 rule: S5147, entrypoints: 3
 Running symbolic analysis
 rule: S5147 done
-rule: S6096, entrypoints: 3
+rule: S5883, entrypoints: 3
 Running symbolic analysis
-rule: S6096 done
-rule: S5146, entrypoints: 3
-Running symbolic analysis
-rule: S5146 done
-rule: S2631, entrypoints: 3
-Running symbolic analysis
-rule: S2631 done
-rule: S6105, entrypoints: 3
-Running symbolic analysis
-rule: S6105 done
+rule: S5883 done
 rule: S5334, entrypoints: 3
 Running symbolic analysis
 rule: S5334 done
 rule: S5131, entrypoints: 3
 Running symbolic analysis
 rule: S5131 done
-rule: S5696, entrypoints: 3
+rule: S5146, entrypoints: 3
 Running symbolic analysis
-rule: S5696 done
+rule: S5146 done
+rule: S2083, entrypoints: 3
+Running symbolic analysis
+rule: S2083 done
+rule: S5144, entrypoints: 3
+Running symbolic analysis
+rule: S5144 done
+rule: S2631, entrypoints: 3
+Running symbolic analysis
+rule: S2631 done
+rule: S2076, entrypoints: 3
+Running symbolic analysis
+rule: S2076 done
+rule: S6096, entrypoints: 3
+Running symbolic analysis
+rule: S6096 done
+rule: S6105, entrypoints: 3
+Running symbolic analysis
+rule: S6105 done
 rule: S3649, entrypoints: 3
 Running symbolic analysis
 rule: S3649 done
-Sensor JsSecuritySensor [security] (done) | time=544ms
+rule: S5696, entrypoints: 3
+Running symbolic analysis
+rule: S5696 done
+Sensor JsSecuritySensor [security] (done) | time=710ms
 ------------- Run sensors on project
 Sensor Zero Coverage Sensor
-Sensor Zero Coverage Sensor (done) | time=4ms
+Sensor Zero Coverage Sensor (done) | time=7ms
 SCM Publisher is disabled
 CPD Executor Calculating CPD for 1 file
 
-CPD Executor CPD calculation finished (done) | time=6ms
+CPD Executor CPD calculation finished (done) | time=7ms
 
 > Task :sonarqube
-Analysis report generated in 46ms, dir size=182 KB
-Analysis report compressed in 9ms, zip size=36 KB
-Analysis report uploaded in 128ms
+Analysis report generated in 122ms, dir size=182 KB
+Analysis report compressed in 19ms, zip size=36 KB
+Analysis report uploaded in 136ms
 ANALYSIS SUCCESSFUL, you can find the results at: https://sonarcloud.io/dashboard?id=go-module1&branch=test3&resolved=false
 Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
-More about the report processing at https://sonarcloud.io/api/ce/task?id=AXt9-fpc7y2mTg0XFXj-
-Analysis total time: 5.753 s
-:sonarqube (Thread[Execution worker for ':',5,main]) completed. Took 7.145 secs.
+More about the report processing at https://sonarcloud.io/api/ce/task?id=AXt-CALJkelvPML2g5vl
+Analysis total time: 6.502 s
+:sonarqube (Thread[Execution worker for ':',5,main]) completed. Took 7.931 secs.
 
-BUILD SUCCESSFUL in 7s
+BUILD SUCCESSFUL in 8s
 1 actionable task: 1 executed

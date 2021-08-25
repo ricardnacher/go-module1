@@ -20,6 +20,9 @@ dependencies {
 }   
 
 def gitDetails = versionDetails()
+gitDetails.properties.each { 
+    println "$it.key -> $it.value" 
+}
 
 sonarqube {
     properties {
@@ -30,6 +33,7 @@ sonarqube {
         property 'sonar.projectName', 'go-module1'    
         property 'sonar.sources', '.'
         property 'sonar.login', System.getenv('SONAR_LOGIN')
+        property 'sonar.version', gitDetails.version
         property 'sonar.branch.name', gitDetails.branchName
     }
 }
