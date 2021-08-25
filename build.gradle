@@ -10,9 +10,14 @@ plugins {
     id "org.sonarqube" version "3.3"
 }
 
+
 golang {
-    packagePath = 'github.com/your/package' // go import path of project to be built, NOT local file system path!
+    packagePath = 'github.com/midokura/goandgradle' // go import path of project to be built, NOT local file system path!
 }
+
+dependencies {
+    "gradle.plugin.com.github.blindpirate:gogradle:0.11.4"
+}   
 
 sonarqube {
     properties {
@@ -22,6 +27,9 @@ sonarqube {
         property 'sonar.projectKey', 'go-module1'
         property 'sonar.projectName', 'go-module1'    
         property 'sonar.sources', '.'
+        property 'sonar.login', System.getenv('SONAR_LOGIN')
     }
 }
+
+
 

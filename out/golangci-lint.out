@@ -1,0 +1,6 @@
+program1.go:13:6: `notUsedFunc` is unused (deadcode)
+func notUsedFunc() {
+     ^
+program1.go:29:2: unreachable: unreachable code (govet)
+	fmt.Println("unreached")
+	^
