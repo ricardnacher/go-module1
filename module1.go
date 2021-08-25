@@ -8,3 +8,8 @@ func Greeting() {
 		fmt.Println("never went here")
 	}
 }
+
+func add(x, y int) int {
+	return x + y // Noncompliant
+	z := x + y   // dead code
+}
