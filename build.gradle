@@ -13,16 +13,10 @@ plugins {
 
 golang {
     packagePath = 'github.com/midokura/goandgradle' // go import path of project to be built, NOT local file system path!
-}
-
-dependencies {
-    "gradle.plugin.com.github.blindpirate:gogradle:0.11.4"
-}   
+}  
 
 def gitDetails = versionDetails()
-gitDetails.properties.each { 
-    println "$it.key -> $it.value" 
-}
+project.version = gitDetails.getVersion()
 
 sonarqube {
     properties {
@@ -33,10 +27,11 @@ sonarqube {
         property 'sonar.projectName', 'go-module1'    
         property 'sonar.sources', '.'
         property 'sonar.login', System.getenv('SONAR_LOGIN')
-        property 'sonar.version', gitDetails.version
         property 'sonar.branch.name', gitDetails.branchName
     }
 }
+
+
 
 
 
