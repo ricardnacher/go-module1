@@ -22,6 +22,6 @@ jobs:
         with:
           go-version: ${{ env.GOLANG_VERSION }}    
       - name: buildAllOneStep
-        run: ./gradlew --info goTest sonarqube    #this is the command run also locally. no sonar installation needed.      
+        run: ./gradlew --info showVersionDetails goTest sonarqube    #this is also the command to run locally. no sonar installation needed.      
         
       

@@ -18,6 +18,15 @@ golang {
 def gitDetails = versionDetails()
 project.version = gitDetails.getVersion()
 
+task showVersionDetails {
+    doLast {    
+        gitDetails.properties.each { 
+            println "$it.key -> $it.value" 
+        }
+    }
+
+}
+
 sonarqube {
     properties {
         property 'sonar.host.url', 'https://sonarcloud.io/'
