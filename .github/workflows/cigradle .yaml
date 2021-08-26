@@ -15,7 +15,7 @@ jobs:
       - name: Set up JDK 1.11
         uses: actions/setup-java@v2
         with:
-          java-version: '8.0.292+10'
+          java-version: '11.0.12'
           distribution: 'adopt'
         #we can even remove this step if our self-hosted container already have it installed.       
       - uses: actions/setup-go@v2
