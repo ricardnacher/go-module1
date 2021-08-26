@@ -5,7 +5,7 @@ env:
   SONAR_TOKEN: ${{ secrets.SONAR_LOGIN }}
 on:
   push:    
-
+    branches:      
 jobs:
   build:
     name: Build
