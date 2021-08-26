@@ -3,6 +3,8 @@ env:
 
 on:
   push:    
+    branches:
+      do_not_run
 
 jobs:
   build:
