@@ -23,6 +23,7 @@ task showVersionDetails {
         gitDetails.properties.each { 
             println "$it.key -> $it.value" 
         }
+        println 'sonar branch:' + branch nvl(gitDetails.branchName,'master')  
     }
 
 }
