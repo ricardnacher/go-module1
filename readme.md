@@ -7,6 +7,7 @@ Right now we are migrating from Travis to Github as CI for some reasons out of t
 This migration can require some changes in source code (repository). The goal is to minimize this effort now keeping in mind any following migration.
 
 **Note:** There is a project that helps to run github actions locally https://github.com/nektos/act but I think that it is over-engeening after taking a look on it. 
+
 **Note 2:** There is also https://docs.gitlab.com/runner/ that allows to run Github actions in our infraestructure but it also ends with more complexity in our devops and developer teams.
 
 Have a look at this question on StackOverflow. https://stackoverflow.com/questions/59241249/how-to-run-github-actions-workflows-locally?answertab=votes#tab-top
