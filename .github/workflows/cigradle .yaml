@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - uses: actions/checkout@v2   
+        with:
+          fetch-depth: 0
         #we can even remove this step if our self-hosted container already have it installed.     
       - name: Set up JDK 1.11
         uses: actions/setup-java@v2
