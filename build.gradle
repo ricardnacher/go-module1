@@ -36,7 +36,7 @@ sonarqube {
         property 'sonar.projectName', 'go-module1'    
         property 'sonar.sources', '.'
         property 'sonar.login', System.getenv('SONAR_LOGIN')
-        if ( gitDetails.branchName==~ '/refs/tags/*' ) {
+        if ( gitDetails.branchName ==~ '/refs/tags/*' ) {
             property 'sonar.branch.name', 'master' 
         } else {
             property 'sonar.branch.name',gitDetails.branchName
