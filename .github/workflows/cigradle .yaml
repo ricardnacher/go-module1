@@ -8,6 +8,7 @@ jobs:
   build:
     name: Build
     #runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:      
       - uses: actions/checkout@v2   
         #we can even remove this step if our self-hosted container already have it installed.     
