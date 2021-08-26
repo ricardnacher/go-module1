@@ -1,0 +1,27 @@
+name: CI
+env:
+  SONAR_LOGIN:  ${{ secrets.SONAR_TOKEN }}
+
+on:
+  push:    
+
+jobs:
+  build:
+    name: Build
+    runs-on: self-hosted
+    steps:      
+      - uses: actions/checkout@v2   
+        #we can even remove this step if our self-hosted container already have it installed.     
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8.0.292+10'
+          distribution: 'adopt'
+        #we can even remove this step if our self-hosted container already have it installed.       
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ${{ env.GOLANG_VERSION }}    
+      - name: buildAllOneStep
+        run: ./gradlew goTest sonarqube    #this is the command run also locally. no sonar installation needed.      
+        
+      

@@ -1,0 +1,44 @@
+name: CI
+env:
+  SONAR_LOGIN:  ${{ secrets.SONAR_TOKEN }}
+
+on:
+  push:    
+
+jobs:
+  build:
+    name: Build
+    runs-on: self-hosted
+    steps:
+      - name: checkout
+      - uses: actions/checkout@v2        
+      #we can even remove this step if our self-hosted container already have it installed.     
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ${{ env.GOLANG_VERSION }}
+      - name: Use golangci-lint
+      #we can even remove this step if our self-hosted container already have it installed.     
+        uses: golangci/golangci-lint-action@v2.5.2 
+        with:
+          version: latest
+          args: --timeout 5m    
+      - name: Run tests with coverage output
+        run: go test -v -cover ./... -coverprofile=coverage.out #command to run locally
+      - name: Save coverage artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: coverage.out
+          path: ./coverage.out   
+      - name: Setup sonarqube
+        uses: warchant/setup-sonar-scanner@v3
+      - name: Run sonarqube
+        env:
+        # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: sonar-scanner
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          -Dsonar.organization=......
+          -Dsonar.host.url=https://sonarcloud.io/
+          -Dsonar.projectKey=.....  #command to run locally
+        
+      
