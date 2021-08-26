@@ -1,5 +1,5 @@
 env:
-  SONAR_LOGIN:  ${{ secrets.SONAR_TOKEN }}
+  SONAR_LOGIN:  ${{ secrets.SONAR_LOGIN }}
 
 on:
   push:    
