@@ -3,7 +3,10 @@ env:
   GOLANG_VERSION: '1.16.4'  
 on:
   push:    
-    branches:      
+    branches:   
+      *
+    tags-ignore:
+      *
 jobs:
   build:
     name: Build
