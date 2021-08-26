@@ -1,6 +1,7 @@
 env:
   SONAR_LOGIN:  ${{ secrets.SONAR_LOGIN }}
   GOLANG_VERSION: '1.16.4'  
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 on:
   push:    
 jobs:
@@ -11,8 +12,7 @@ jobs:
     steps:      
       - uses: actions/checkout@v2   
         with:
-          fetch-depth: 0
-      - run: git checkout ${{ env.GITHUB_SHA }}
+          fetch-depth: 0      
         #we can even remove this step if our self-hosted container already have it installed.     
       - name: Set up JDK 1.11
         uses: actions/setup-java@v2
