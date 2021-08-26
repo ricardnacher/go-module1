@@ -12,7 +12,7 @@ plugins {
 }
 
 golang {
-    packagePath = 'github.com/midokura/goandgradle' // go import path of project to be built, NOT local file system path!
+    packagePath = 'github.com/midokura/go-module1' // go import path of project to be built, NOT local file system path!
 }  
 
 def gitDetails = versionDetails()

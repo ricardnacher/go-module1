@@ -14,5 +14,4 @@ func NeverGetInIf() {
 	if false {
 		fmt.Println("program1")
 	}
-	a
 }
