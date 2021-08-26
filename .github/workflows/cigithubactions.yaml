@@ -10,7 +10,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: checkout
-      - uses: actions/checkout@v2        
+        uses: actions/checkout@v2        
       #we can even remove this step if our self-hosted container already have it installed.     
       - uses: actions/setup-go@v2
         with:
