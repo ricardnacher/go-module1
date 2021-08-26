@@ -23,7 +23,6 @@ task showVersionDetails {
         gitDetails.properties.each { 
             println "$it.key -> $it.value" 
         }
-        println 'sonar branch:' + branch nvl(gitDetails.branchName,'master')  
     }
 
 }
@@ -37,10 +36,7 @@ sonarqube {
         property 'sonar.projectName', 'go-module1'    
         property 'sonar.sources', '.'
         property 'sonar.login', System.getenv('SONAR_LOGIN')
-       
-            property 'sonar.branch.name', nvl(gitDetails.branchName,'master') 
-      
-        
+        property 'sonar.branch.name', ((gitDetails.branchName) ?: 'master')        
     }
 }
 
